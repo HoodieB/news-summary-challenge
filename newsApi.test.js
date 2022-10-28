@@ -11,8 +11,13 @@ describe('API class', () => {
     const api = new NewsApi();
 
     fetch.mockResponseOnce(JSON.stringify({
-      name: "Some value",
+      webTitle: "Some value",
       id: 123
     }));
-})
+
+    api.loadSummaries((returnedNewsFromApi) => {
+      expect(returnedNewsFromApi.webTitle).toBe("Some value");
+      expect(returnedNewsFromApi.id).toBe(123);
+    });
+  })
 })
