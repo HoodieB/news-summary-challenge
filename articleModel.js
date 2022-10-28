@@ -4,4 +4,4 @@ class ArticleModel {
   }
 }
 
-module.exports = ArticleModel
+module.exports = ArticleModel;
