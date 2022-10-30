@@ -1,6 +1,7 @@
 const NewsApi = require('./newsApi')
 const FeedModel = require('./feedModel')
 const NewsView = require('./newsView')
+const ArticleModel = require('./articleModel')
 
 const api = new NewsApi
 const feed = new FeedModel
@@ -16,4 +17,4 @@ api.loadSummaries((response) => {
   feed.setArticles(response)
 })
 
-console.log("I've displayed the articles!")
+console.log("Articles loaded!")
