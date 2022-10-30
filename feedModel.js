@@ -4,6 +4,7 @@ class FeedModel {
   constructor() {
     this.feed = []
   }
+  
   getFeed() {
     return this.feed
   }
@@ -15,5 +16,4 @@ class FeedModel {
   }
 }
 
-module.exports = FeedModel;
- 
+module.exports = FeedModel

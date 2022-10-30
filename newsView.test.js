@@ -15,7 +15,7 @@
    });
  
    it("displays the list of articles", () => {
- 
+   
      const feed = new FeedModel;
      const view = new NewsView(feed);
      const exampleResponse = {
@@ -29,6 +29,6 @@
      }
      feed.setArticles(exampleResponse)
      view.displayArticles()
-     expect(document.querySelectorAll('div.article').length).toBe(1)
+     expect(document.querySelectorAll('#article').length).toBe(1)
    })
  })

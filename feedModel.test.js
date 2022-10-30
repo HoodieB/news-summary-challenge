@@ -1,4 +1,4 @@
-const FeedModel = require('./feedModel');
+const FeedModel = require('./feedModel')
 
 require('jest-fetch-mock').enableMocks()
 
@@ -6,9 +6,10 @@ describe('FeedModel', () => {
   beforeEach(() => {
     fetch.resetMocks()
   });
-
+  
   it('calls fetch and returns articles in an array', () => {
     const feed = new FeedModel()
+
     const exampleResponse = {
       response: {
         results: [
@@ -18,6 +19,7 @@ describe('FeedModel', () => {
         ]
       }
     }
+
     feed.setArticles(exampleResponse)
     expect(feed.getFeed().length).toEqual(1)
   })
